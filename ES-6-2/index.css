@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+#container {
+  width: 95vw;
+  margin: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#container img {
+  width: 100%;
+  height: 60%;
+}
+
+
+#nav{
+    height:75px;
+    border: 1px solid black;
+}
+
+#main{
+    width:95vw;
+    display:flex;
+    height:300px;
+    margin:auto;
+    margin-top:10px;
+}
+
+#video_details{
+    flex:3;
+    
+}
+
+#recommendation{
+    flex:1;
+    border: 1px solid green;
+}

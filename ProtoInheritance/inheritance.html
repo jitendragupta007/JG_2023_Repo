@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+  <body>
+    <h1>Inheritance</h1>
+  </body>
+</html>
+<script>
+  // let nikeProduct={
+  //     name:"shoes",
+  //     price:"40000",
+  //     type:"lofer"
+  // }
+
+  // let obj= Object.create(nikeProduct);
+  // obj["color"]="black";
+  // console.log(obj);
+
+  let arr = new Array(1, 2, 3);
+  console.log("arr:", arr);
+
+  function MyArray() {
+    Object.defineProperty(this, "length", {
+      enumerable: false,
+    });
+
+    this.length = arguments.length;
+    for (let i = 0; i < arguments.length; i++) {
+      this[i] = arguments[i];
+    }
+  }
+
+  let myArr = new MyArray(4, 5, 6);
+  //console.log(myArr);
+  console.log(Object.values(myArr));
+</script>

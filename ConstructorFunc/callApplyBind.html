@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+
+let kitchen = {
+    place:'kitchan',
+    number: 1,
+  cookFood(order,time){
+    console.log(`Serving food in the ${this.place}, She has a order of ${order}. She will prepare it by ${time}`)
+  }
+  };
+
+kitchen.cookFood("maggie",5);
+
+let bedroom={
+  place:"bedroomm",
+  number:2,
+}
+
+kitchen.cookFood.call(bedroom,"idli",9);
+kitchen.cookFood.apply(bedroom,["Sambhar",10]);
+let p= kitchen.cookFood.bind(bedroom,"Sambhar",10);
+p();
+</script>
+<script>
+
+function ringBell(action){
+  console.log(`${this.name} rang the bell and ${action}`)
+
+}
+
+let person1={
+  name: "Jeet",
+}
+ 
+ringBell.call(person1, "ran away.")
+let person2={
+  name: "Angie",
+  }
+ringBell.call(person2,"sit down.")
+
+let person3={
+  name:"Rahul",
+  }
+
+  ringBell.call(person3, "flew away.")
+
+</script>

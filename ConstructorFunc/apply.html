@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let youtuber1 = {
+    name: "Jeet",
+    class: "Matric",
+
+    feature: function (rating,support) {
+    console.log(`${this.name} is in ${this.class} class. I want to give ${this.name} ${rating} star rating. please ${support} ${this.name} channel`);
+    },
+  };
+
+let youtuber2={
+    name: "thapa",
+    class: "home"
+}
+
+
+youtuber1.feature(5,"subscribe");
+youtuber1.feature.apply(youtuber2,[5, "subscribe"]);
+
+</script>
